@@ -12,4 +12,4 @@ Ben Ahmet Aziz Keskin. Harran Üniversitesi'nde Bilgisayar Mühendisliği 2. sı
 
 ## İletişim
 - [GitHub adresim](https://github.com/aazizkeskin)
-- [Linkedin adresim](https://linkedin.com/ahmet-aziz-keskin)
+- [LinkedIn adresim](https://linkedin.com/ahmet-aziz-keskin)
