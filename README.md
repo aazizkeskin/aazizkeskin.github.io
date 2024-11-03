@@ -11,5 +11,5 @@ Ben Ahmet Aziz Keskin. Harran Üniversitesi'nde Bilgisayar Mühendisliği 2. sı
 - Yabancı dil (İngilizce)
 
 ## İletişim
-- [GitHub adresim] (https://github.com/aazizkeskin)
-- [Linkedin adresim] (https://linkedin.com/ahmet-aziz-keskin)
+- [GitHub adresim](https://github.com/aazizkeskin)
+- [Linkedin adresim](https://linkedin.com/ahmet-aziz-keskin)
