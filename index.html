@@ -52,7 +52,113 @@
     text-align: center;
     }
 
+    #poemButton{
+    text-align: center;
+    }
+
+    button{
+    background-color: gray;
+    color: white;
+    height: 30px;
+    width: 250px;
+    cursor: pointer;
+    }
+
+    #slide1, #slide2, #slide3, #poems{
+    display: none;
+    }
+
+    #slider1, #slider2, #slider3{
+    cursor: pointer;
+    }
+
+    #message {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    display: none;
+    }
+
+    #messageContainer {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    }
+
+    .messageArea input, .messageArea textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+    button[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+
     </style>
+
+    <script src="jquery-3.7.1.min.js"> </script>
+
+    <script>
+
+        $(function(){
+            $("#slider1").click(function(){
+                $("#slide1").slideToggle();
+            });
+        });
+
+        $(function(){
+            $("#slider2").click(function(){
+                $("#slide2").slideToggle();
+            });
+        });
+
+        $(function(){
+            $("#slider3").click(function(){
+                $("#slide3").slideToggle();
+            });
+        });
+
+        $(function(){
+            $("#showPoem").click(function(){
+                $("#poems").slideToggle();
+                $("#poems").css("display", "flex");
+
+            const currentText = $(this).text();
+            if (currentText === 'Hide The Poems') {
+             $(this).text('Show The Poems');
+            } else {
+            $(this).text('Hide The Poems');
+            }
+            });
+        });
+
+        $(function(){
+            $("#showMessage").click(function(){
+                $("#message").slideToggle();
+                $("#message").css("display", "flex");
+
+            const currentText = $(this).text();
+            if (currentText === 'Hide Message Panel') {
+             $(this).text('Send Us Message');
+            } else {
+            $(this).text('Hide Message Panel');
+            }
+            });
+        });
+
+
+    </script>
 
     </head>
 
@@ -64,23 +170,60 @@
             <img id="tree" src="tree.jpg" width="150" height="150"> <br> <br>
             <a href="pre.com">What is the Dark Presence?</a>
             <a href="tom.com">Who is Thomas Seine?</a>
-            <a href="return.com">What is the film "Yötön Yö" and the novel "Return"?</a>
+            <a href="return.com">What is the film "Yoton Yo" and the novel "Return"?</a> <br><br>
+            <button id="showMessage"> Send Us Message </button>
         </div>
 
+
+        <div id="message">
+
+            <div id="messageContainer">
+              <h2>Send Message</h2>
+
+              <form action="#" method="POST">
+
+                <div class="messageArea">
+                    <label for="email"><strong>Email</strong></label><br>
+                    <input type="email" id="email" name="email" required>
+                </div> <br>
+
+                <div class="messageArea">
+                    <label for="subject"><strong>Subject</strong></label><br>
+                    <input type="text" id="subject" name="subject" required>
+                </div> <br>
+
+                <div class="messageArea">
+                    <label for="content"><strong>Content</strong></label><br>
+                    <textarea id="content" name="content" required rows="5"></textarea>
+                </div> <br>
+
+                <button type="submit">Send</button>
+              </form>
+            </div>
+
+        </div>
+
+
         <div id="about">
-            <h3>About Us</h3>
-            <p><strong>We are the Cult of The Word. The Dark Presence is our deity. The Grandmaster is our guide.</strong></p>
+            <h3 id="slider1">About Us</h3>
+            <p id="slide1"><b>We are the Cult of The Word. The Dark Presence is our deity. The Grandmaster is our guide.</b></p>
         </div>
 
         <div id="goal">
-            <h3>Our Goal</h3>
-            <p><strong>Our goal is to free our long lost leader, Scracth, from the Dark Place.</strong></p>
+            <h3 id="slider2">Our Goal</h3>
+            <p id="slide2"><b>Our goal is to free our long lost leader, Scracth, from the Dark Place.</b></p>
         </div>
 
         <div id="contact">
-            <h3>Contact Us</h3>
-            <p><strong>If you are worthy to comprehend the Dark Poems, we will find you.</strong></p>
+            <h3 id="slider3">Contact Us</h3>
+            <p id="slide3"><b>If you are worthy to comprehend the Dark Poems, contact us.</b></p>
         </div>
+        <br>
+
+        <div id="poemButton">
+            <button id="showPoem"> Show The Poems </button>
+        </div>
+        <br>
 
         <div id="poems">
             <div>
@@ -100,7 +243,7 @@
         </div>
 
         <div id="end">
-            <p><strong>This is the ritual to lead you on. Your friends will meet him when you are gone.</strong></p> <br>
+            <p><b>This is the ritual to lead you on. Your friends will meet him when you are gone.</b></p>
             <p title="This web site is inspired from a cult in a video game, Alan Wake 2.">Please move your mouse over this text for an important note.</p><br>
         </div>
 
