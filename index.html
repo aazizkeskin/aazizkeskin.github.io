@@ -104,7 +104,6 @@
     cursor: pointer;
     }
 
-
     </style>
 
     <script src="jquery-3.7.1.min.js"> </script>
@@ -157,8 +156,35 @@
             });
         });
 
+    </script>
+
+    <script>
+
+        $(function () {
+            $("#messageForm").on("submit", function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: "url",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                    email: $("#email").val(),
+                    subject: $("#subject").val(),
+                    content: $("#content").val()
+                   }),
+                    success: function (response) {
+                        alert('Message sent successfully!');
+                    },
+                    error: function (error) {
+                        alert('An error occurred');
+                    }
+                });
+            });
+        });
 
     </script>
+
 
     </head>
 
@@ -180,7 +206,7 @@
             <div id="messageContainer">
               <h2>Send Message</h2>
 
-              <form action="#" method="POST">
+              <form id="messageForm">
 
                 <div class="messageArea">
                     <label for="email"><strong>Email</strong></label><br>
